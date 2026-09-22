@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS inside HTML</title>
+</head>
+
+<body>
+    <h1>Check the Console!</h1>
+
+    <script>
+        // ── This runs in the browser console ──
+        console.log("Hello from JS inside HTML!");
+
+        // ── Func ──
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+        console.log(greet("Peter"));
+
+        // ── Map (Object) ──
+        const users = {
+            Alice: 30,
+            Bob: 25,
+            Charlie: 35,
+        };
+
+        // ── Loop through map ──
+        for (const [name, age] of Object.entries(users)) {
+            console.log(`${name} is ${age} years old`);
+        }
+
+        // ── Check if key exists ──
+        if ("Alice" in users) {
+            console.log("Alice's age:", users["Alice"]);
+        }
+    </script>
+</body>
+
+</html>
